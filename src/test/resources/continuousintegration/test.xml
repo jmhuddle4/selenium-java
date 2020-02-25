@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--Simple configuration to run a single test in the AIT framework -->
+<suite name="ateam-test" verbose="1" parallel="methods" thread-count="4">
+
+    <listeners>
+<!--        <listener class-name="com.autotrader.TestNGListener"/>-->
+    </listeners>
+
+    <parameter name="runLocation" value="local"/>
+
+    <parameter name="baseUrl" value="https://cs-master.awsacsnp.autotrader.com/"/>
+
+    <parameter name="os" value="WINDOWS"/>
+    <parameter name="osVersion" value="10"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="latest"/>
+    <parameter name="screenResolution" value="1600x1200"/>
+    <parameter name="dataEnvironment" value="QA"/>
+    <parameter name="project" value="cs-dev-local"/>
+
+    <test name="cs-team">
+        <classes>
+            <class name="home.HomePageTest"/>
+        </classes>
+    </test>
+</suite>
